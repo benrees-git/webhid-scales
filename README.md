@@ -18,11 +18,19 @@ The WebHID API is not yet fully released, to use the extension you will need to 
 
 ## Configuration
 
-* **Weight Input Element** - The `id` of the input field in which to output the weight value
-* **Weight Input Element Iframe** - If the Weight Input Element is contained within an iFrame then you must specifiy the id of that Iframe.
-* **Scale Model** - The make/model of the scale. 
-* **Weight Measurement Units** - Should match the configuration of your scales.
-* **Decimalise Weight** - for imperial measurement units, this option controls if the output shoudl be lbs:oz (e.g. 5:8 lbs/oz) or if it should be converted into a decimal (e.g. 5.5 lbs).
+Configuration Option | Description
+------------ | -------------
+**Weight Input Element** | The `id` of the input field in which to output the weight value
+**Weight Input Element Iframe** | If the Weight Input Element is contained within an iFrame then you must specifiy the id of that Iframe.
+**Scale Model** | The make/model of the scale. 
+**Weight Measurement Units** | Should match the configuration of your scales.
+**Decimalise Weight** | for imperial measurement units, this option controls if the output shoudl be lbs:oz (e.g. 5:8 lbs/oz) or if it should be converted into a decimal (e.g. 5.5 lbs).
+
+### Application Configuration Examples
+
+**Peoplevox WMS**
+* Weight Input Element: `packageWeightTxt`
+* Weight Input Element Iframe: `popupIframe`
 
 ## Authors
 
