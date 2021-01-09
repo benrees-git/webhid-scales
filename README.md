@@ -4,7 +4,7 @@ A Google Chrome extension to connect HID compliant scales and output the value i
 
 ## Getting Started
 
-This is an unpacked extension.
+**This is an unpacked extension.**
 
 To install:
 
@@ -30,5 +30,5 @@ The WebHID API is not yet fully released, to use the extension you will need to 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENCE.md](LICENCE.md) file for details
 
