@@ -1,0 +1,43 @@
+body {
+    background-color: #36437a;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/** OPTIONS
+--------------------------- **/
+
+.masthead {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-top: 2rem;
+}
+.content {
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 0.5rem;
+}
+.footer {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+/** POPUP
+--------------------------- **/
+.popup {
+    text-align: center;
+    background-color: #36437a;
+    color: #fff;
+    width: 250px;
+    padding: 2rem;
+}
+.popup button {
+    width: 100%;
+    display: block;
+}
+
+/** ALERT
+--------------------------- **/
