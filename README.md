@@ -14,7 +14,7 @@ To install:
 
 ### Prerequisites
 
-The WebHID API is not yet fully released, to use the extension you will need to enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
+The WebHID API is not yet fully released - to use the extension you will need to enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
 
 ## Configuration
 
