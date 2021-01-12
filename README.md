@@ -4,7 +4,7 @@ A Google Chrome extension to connect HID compliant scales and output the value i
 
 ## Getting Started
 
-**This is an unpacked extension.**
+**This is an unpacked extension for the moment** - with positive feedback, it will eventually be submitted to the Chrome Store.
 
 #### To install:
 
