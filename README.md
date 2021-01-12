@@ -6,11 +6,16 @@ A Google Chrome extension to connect HID compliant scales and output the value i
 
 **This is an unpacked extension.**
 
-To install:
+#### To install:
 
-1. Download the source code from GitHub
-2. Go to `chrome://extensions/` and select [Load unpacked]
+1. Download the source code from GitHub to a static location on your PC (e.g. `C:/`)
+2. Go to `chrome://extensions/`, check "Developer mode" and select _Load Unpacked_
 3. Select the folder where the extension was downloaded
+
+#### To update:
+
+1. Replace the files in the folder where the extension is installed
+2. Go to `chrome://extensions/` and select _Update_
 
 ### Prerequisites
 
@@ -24,7 +29,7 @@ Configuration Option | Description
 **Weight Input Element Iframe** | If the Weight Input Element is contained within an iFrame then you must specifiy the id of that Iframe.
 **Scale Model** | The make/model of the scale. 
 **Weight Measurement Units** | Should match the configuration of your scales.
-**Decimalise Weight** | for imperial measurement units, this option controls if the output shoudl be lbs:oz (e.g. 5:8 lbs/oz) or if it should be converted into a decimal (e.g. 5.5 lbs).
+**Decimalise Weight** | For imperial measurement units, this option controls if the output should be lbs:oz (e.g. 5:8 lbs/oz) or if it should be converted into a decimal (e.g. 5.5 lbs).
 
 ### Application Configuration Examples
 
