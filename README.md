@@ -1,5 +1,7 @@
 # WebHID Scales
 
+![WebHid Scales Logo](https://github.com/benrees-git/webhid-scales/blob/master/img/hidscales_128.png)
+
 A Google Chrome extension to connect HID compliant scales and output the value into a designated input field (via HTML element ID). 
 
 ## Getting Started
@@ -19,7 +21,7 @@ A Google Chrome extension to connect HID compliant scales and output the value i
 
 ### Prerequisites
 
-The WebHID API is not yet fully released - to use the extension you will need to enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
+WebHID API is included with Chrome Version 89 and later. If you use an earlier version of Chrome then to use the extension you will need to enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
 
 ## Configuration
 

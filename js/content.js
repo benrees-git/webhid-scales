@@ -75,7 +75,7 @@ function handleInputReport(e) {
             if(weightMeasurementUnits == 'lbs') {
                 // Pounds and Ounces 
                 var weight = input
-                console.log(decimaliseWeight)
+                //console.log(decimaliseWeight)
                 if(decimaliseWeight !== 'true') {
                     weight = Math.ceil(input / 10);
                     var lbs = Math.floor(weight / 16);
@@ -129,7 +129,7 @@ async function openDevice(device) {
 
     device.open().then(() => {
         device.addEventListener('inputreport', handleInputReport);
-        console.log("Opened device: " + device.productName, device);
+        console.log("Opened device: " + device.productName);
     }); 
 
 }
@@ -142,7 +142,7 @@ async function getConfigItem(configItem) {
             if (!chrome.runtime.error && configValue && typeof configValue === 'object' && Object.keys(configValue).length > 0) {
                 resolve(Object.values(configValue)[0]);
             } else {
-                reject('unable to find configuration setting');
+                reject('Unable to find configuration setting');
             }
         })
     );
