@@ -1,7 +1,8 @@
 # WebHID Scales
 
-![WebHid Scales Logo](https://github.com/benrees-git/webhid-scales/blob/master/img/hidscales_128.png)
-
+<p align="center">
+  <img width="128" height="128" src="https://github.com/benrees-git/webhid-scales/blob/master/img/hidscales_128.png">
+</p>
 A Google Chrome extension to connect HID compliant scales and output the value into a designated input field (via HTML element ID). 
 
 ## Getting Started
