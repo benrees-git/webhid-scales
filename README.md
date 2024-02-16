@@ -6,6 +6,8 @@ A Google Chrome extension to connect HID compliant scales and output the value i
 
 ## Release Notes V 0.1.2
 
+![WebHid Scales Screenshot](https://github.com/benrees-git/webhid-scales/blob/master/webhid-scales-v0.1.2-screen.png)
+
 1. Migration to manifest V3 in preparation for submition to the Chrome Store
 2. Updated handling of `iframe` elements in the browser. It is no longer required to specifiy iframes in the configuration.
 3. Updated styling
