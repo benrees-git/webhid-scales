@@ -34,7 +34,6 @@ WebHID API is included with Chrome Version 89 and later. If you use an earlier v
 Configuration Option | Description
 ------------ | -------------
 **Weight Input Element** | The `id` of the input field in which to output the weight value
-**Weight Input Element Iframe** | If the Weight Input Element is contained within an iFrame then you must specifiy the id of that Iframe.
 **Scale Model** | The make/model of the scale. 
 **Weight Measurement Units** | Should match the configuration of your scales.
 **Decimalise Weight** | For imperial measurement units, this option controls if the output should be lbs:oz (e.g. 5:8 lbs/oz) or if it should be converted into a decimal (e.g. 5.5 lbs).
