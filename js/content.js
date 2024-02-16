@@ -10,8 +10,16 @@ if ("hid" in navigator) {
     // Prompt for new connection if user requests
     chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
-            console.log(request);
-            if(request.connectDevice) {
+
+            if (request.findWeightField) {
+                findWeightField().then((field) => {
+                    sendResponse(field)
+                }).catch((e) => {
+                    sendResponse('error')
+                })
+            }
+
+            if (request.connectDevice) {
                 connectDevice().then((device) => {
                     sendResponse(device)
                 }).catch((e) => {
@@ -33,7 +41,6 @@ if ("hid" in navigator) {
 
 }
 
-
 function handleConnectedDevice(e) {
     // Currently this isn't really much use as persistent permissions are not yet implemented.
     console.log("Device connected: " + e.device.productName);
@@ -54,7 +61,7 @@ function handleInputReport(e) {
     const i3 = e.data.getUint8(3);
     const i4 = e.data.getUint8(4);
 
-    const input = i3 + (i4*256);
+    const input = i3 + (i4 * 256);
 
     if(input != lastInput) {
 
@@ -62,15 +69,13 @@ function handleInputReport(e) {
 
         Promise.all([
             getConfigItem('weightInputElement'),
-            getConfigItem('weightInputElementIframe'),
             getConfigItem('weightMeasurementUnits'),
             getConfigItem('decimaliseWeight')]
         ).then((configValues) => {
 
             weightInputElement = configValues[0];
-            weightInputElementIframe = configValues[1];
-            weightMeasurementUnits = configValues[2];
-            decimaliseWeight = configValues[3];
+            weightMeasurementUnits = configValues[1];
+            decimaliseWeight = configValues[2];
             
             if(weightMeasurementUnits == 'lbs') {
                 // Pounds and Ounces 
@@ -89,11 +94,8 @@ function handleInputReport(e) {
                 var weight = input / 1000
             }
 
-            if(weightInputElementIframe) {
-                document.getElementById(weightInputElementIframe).contentWindow.document.getElementById(weightInputElement).value = weight;
-            } else {
-                document.getElementById(weightInputElement).value = weight;
-            }
+            weightField = findElement(document, weightInputElement);
+            weightField.value = weight;
 
         }).catch((e) => {
             // -> Error retrieving config
@@ -103,8 +105,27 @@ function handleInputReport(e) {
     
 }
 
+async function findWeightField() {
+
+    Promise.all([
+        getConfigItem('weightInputElement')
+    ]).then((configValues) => {
+        weightInputElement = configValues[0];
+
+        weightField = findElement(document, weightInputElement);
+        if (!weightField) {
+            return null
+        }
+        weightField.style.border = "3px solid red"; 
+
+    }).catch((e) => {
+        return e
+    });
+
+}
+
 async function connectDevice() {
-    
+
     console.log('Requesting permissions...')
     let scaleModel = await getConfigItem('scaleModel');
     let vendorId = null;
@@ -148,3 +169,23 @@ async function getConfigItem(configItem) {
     );
 
 }
+
+function findElement(doc, id) {
+
+    var el = doc.getElementById(id);
+    if (el) return el;
+
+    var frames = doc.getElementsByTagName("iframe");
+
+    for (var i = 0; i < frames.length; i++) {
+        try {
+            var el = findElement(frames[i].contentWindow.document, id);
+            if (el) return el;
+        } catch (e) {
+            // nothing to do with e
+        }
+    }
+
+    return null;
+}
+

@@ -1,16 +1,17 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "WebHID Scales",
+    "description": "Connect to a WebHID compliant scales and read input into a defined field in the browser. Ideal for web-based shipping tools and WMS solutions.",
     "icons": { 
-      "16": "img/hidscales_16.png",
-      "48": "img/hidscales_48.png",
-     "128": "img/hidscales_128.png" 
+      "16": "img/hidscales_icon_colour_16.png",
+      "48": "img/hidscales_icon_colour_48.png",
+     "128": "img/hidscales_icon_colour_128.png" 
     },
-    "version": "0.10",
-    "browser_action": {
+    "version": "0.1.2",
+    "action": {
       "default_popup": "popup.html",
       "default_icon": {
-        "48": "img/hidscales_48.png"
+        "48": "img/hidscales_icon_colour_48.png"
     }
     },
     "options_page": "options.html",

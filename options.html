@@ -12,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" type="text/css" href="css/raleway.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -25,24 +27,25 @@
   </head>
   <body>
 
+    <!-- Masthead -->
     <div class="masthead">
       <div class="container">
-        <img src="img/hidscales_128w.png" style="width: 8rem;"/>
-        <h3>WebHid Scales</h3>
+        <img src="img/hidscales_icon_colour_48.png" alt="WebHID Scales Icon">
+        <h2>WebHID Scales</h2>
       </div>
     </div>
 
-    <div class="container content">
-      <div class="row">
-        <form class="config" id="configForm">
-          <h5>Configuration</h5>
-          <hr>
+    <div class="container">
+      <div class="row" style="text-align: center">
 
+        <form class="config" id="configForm">
+
+          <div style="text-align: center; margin-bottom: 3rem;">
+              <h5>Configuration</h5>
+          </div>
+          
           <label>Weight Input Element:</label>
           <input id="weightInputElement" type="text" class="u-full-width"/>
-
-          <label>Weight Input Element Iframe</label>
-          <input id="weightInputElementIframe" type="text" class="u-full-width"/>
 
           <label>Scale Model</label>
           <select id="scaleModel" class="u-full-width">
@@ -61,20 +64,21 @@
             <option value="false">No</option>
             <option value="true">Yes</option>
           </select>
-
-          <hr>
-              
-          <input id="configFormSave" type="submit" class="button-primary" value="Save"/>
+          
+          <div style="text-align: center;">
+            <input id="configFormSave" type="submit" class="button-primary" value="Save" />
+          </div>
 
         </form>
+
       </div>
+
     </div>
     
     <div class="container footer">
       <a href="https://github.com/benrees-git/webhid-scales" target="_blank">View project on GitHub</a><br>
-      Copyright &copy; 2020<br>
       This project is licensed under the MIT License
-    </div>>
+    </div>
 
   </body>
 </html>

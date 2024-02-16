@@ -11,7 +11,6 @@ $(document).ready(function () {
 
 
 function saveConfig() {
-
     var storage = chrome.storage.local;
     var configForm = document.getElementById('configForm');
     var configFormChildren = configForm.children;  

@@ -1,8 +1,14 @@
 # WebHID Scales
 
-![WebHid Scales Logo](https://github.com/benrees-git/webhid-scales/blob/master/img/hidscales_128.png)
+![WebHid Scales Logo](https://github.com/benrees-git/webhid-scales/blob/master/img/hidscales_icon_colour_96.png)
 
 A Google Chrome extension to connect HID compliant scales and output the value into a designated input field (via HTML element ID). 
+
+## Release Notes V 0.1.2
+
+1. Migration to manifest V3 in preparation for submition to the Chrome Store
+2. Updated handling of `iframe` elements in the browser. It is no longer required to specifiy iframes in the configuration.
+3. Updated styling
 
 ## Getting Started
 
@@ -37,7 +43,6 @@ Configuration Option | Description
 
 **Peoplevox WMS**
 * Weight Input Element: `packageWeightTxt`
-* Weight Input Element Iframe: `popupIframe`
 
 ## Authors
 
