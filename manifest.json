@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "WebHID Scales",
-    "description": "Connect to a WebHID compliant scales and read input into a defined field in the browser. Ideal for web-based shipping tools and WMS solutions.",
+    "description": "Connect to a WebHID scales and read input into a field in the browser. Ideal for web-based shipping tools and WMS solutions.",
     "icons": { 
       "16": "img/hidscales_icon_colour_16.png",
       "48": "img/hidscales_icon_colour_48.png",
